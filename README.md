@@ -31,4 +31,4 @@ d. useState
 // data array ma ako xa so [] in useState // object ma ako vaye {} hunthyo
 e. data in products array now use .map to loop in products array and show data
 added key in the div
-f. 
+
