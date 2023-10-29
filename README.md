@@ -31,4 +31,11 @@ d. useState
 // data array ma ako xa so [] in useState // object ma ako vaye {} hunthyo
 e. data in products array now use .map to loop in products array and show data
 added key in the div
+13. AddProduct
+AddProduct.jsx for a form for creating new product
+->mockapi doesnot support type="file"
+->input tag should be self closing
+->react doesnot support for replace with htmlFor
+
+
 
