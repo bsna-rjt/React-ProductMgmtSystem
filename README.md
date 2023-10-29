@@ -37,5 +37,61 @@ AddProduct.jsx for a form for creating new product
 ->input tag should be self closing
 ->react doesnot support for replace with htmlFor
 
+FIRST APPROACH
+->using onChange event with separate function for different input
+//     const [productImage, setProductImage] = useState("");
+//   const [productName, setProductName] = useState("");
+//   const [productDescription, setProductDescription] = useState("");
+//   const [productMaterial, setProductMaterial] = useState("");
+// console.log(productImage, productName, productDescription, productMaterial);
+
+//   const addProduct = async (e) => {
+    // e.preventDefault();
+
+    // const response = await axios.post("https://652fbacd6c756603295d8ec5.mockapi.io/products",{
+    //     productImage:productImage,
+    //     productNAme:productName,
+    //     productDescription:productDescription,
+    //     productMaterial:productMaterial
+    // })
+
+SECOND APPROACH
+->which use "name" attribute 
+    // const formData= new FormData(e.currentTarget);
+    // console.log(formData.get('productNAme'));
+    // console.log(...formData);
+    // const data = Object.fromEntries(formData);
+    // console.log(data);
+
+    // const response = await axios.post("https://652fbacd6c756603295d8ec5.mockapi.io/products",data)
+    // console.log("response",response);
+
+THIRD APPROACH
+->  WITH handleChange function for all inputs in onChange event 
+  const [data, setData] = useState({
+    productImage: "",
+    productNAme: "",
+    productDescription: "",
+    productMaterial: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+    console.log("data", data);
+  };
+
+  const addProduct = async (e)=>{
+    e.preventDefault();
+    const respose = await axios.post("https://652fbacd6c756603295d8ec5.mockapi.io/products",data)
+    if(respose.status==201){
+        navigate("/")
+    }
+  }
+
+
 
 
