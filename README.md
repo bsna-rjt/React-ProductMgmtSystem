@@ -92,6 +92,12 @@ THIRD APPROACH
     }
   }
 
+  13. View Single Product
+  SingleProduct.jsx
+  
+  14. Delete Product
+  axios.delete
+
 
 
 
