@@ -39,6 +39,7 @@ const deleteProduct=async ()=>{
                 <mark>{product.productMaterial}</mark>
                 <br/>
                 <button onClick={deleteProduct}>Delete</button>
+                <button onClick={()=>navigate(`/editProduct/${product.id}`)}>Edit</button>
             </div> 
     </>
   )

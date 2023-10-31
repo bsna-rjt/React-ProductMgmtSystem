@@ -67,7 +67,9 @@ SECOND APPROACH
     // console.log("response",response);
 
 THIRD APPROACH
+
 ->  WITH handleChange function for all inputs in onChange event 
+
   const [data, setData] = useState({
     productImage: "",
     productNAme: "",
@@ -93,10 +95,16 @@ THIRD APPROACH
   }
 
   13. View Single Product
+  
   SingleProduct.jsx
   
   14. Delete Product
+
   axios.delete
+
+  15. Edit Product
+
+  EditProduct.jsx
 
 
 
