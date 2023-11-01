@@ -6,7 +6,8 @@ const Navbar = () => {
   // const navigate=useNavigate()
   return (
     <div className="navbar">
-    <a href="#">Home</a>
+    {/* <a href="#">Home</a> */}
+    <Link to="/">Home</Link>
     {/* <a href="/addProduct">Add Product</a> */}
     <Link to="/addProduct">Add Product</Link> 
     {/* <button onClick={()=>navigate("/addProduct")}>Add P</button> */}
